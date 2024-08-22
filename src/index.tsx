@@ -1,19 +1,21 @@
+// src/index.tsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import App from './Container/App';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { store } from './Storage';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+// Uygulamanın kök bileşenini (App) DOM'a bağlıyoruz
+const rootElement = document.getElementById('root');
+const root = ReactDOM.createRoot(rootElement as HTMLElement);
+
 root.render(
-  <React.StrictMode>
+  <Provider store = {store}>
+    <BrowserRouter>
     <App />
-  </React.StrictMode>
-);
+    </BrowserRouter>
+  </Provider>
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+);
