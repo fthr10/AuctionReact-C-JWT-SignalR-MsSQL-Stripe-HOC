@@ -1,7 +1,32 @@
 import React from 'react'
 import './Styles/Header.css'
+import { useDispatch, useSelector } from 'react-redux'
+import userModel from '../Interfaces/userModel'
+import { RootState } from '../Storage/store'
+import { useEffect } from 'react'
+import { InitialState, setLoggedInUser } from '../Storage/Redux/authenticationSlice'
+import { Navigate, NavLink, useNavigate } from 'react-router-dom'
 
 function Header() {
+
+
+  const userStore: userModel = useSelector((state:RootState) => state.authenticationStore);
+  const token = localStorage.getItem("token");
+  const Dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() =>{
+   
+  },[userStore])
+
+  
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    Dispatch(setLoggedInUser({...InitialState}))
+    navigate("/");
+  }
+
+
   return (
     <div>
          <div>
@@ -15,47 +40,59 @@ function Header() {
 
 <div className="collapse navbar-collapse" id="navbarSupportedContent">
  <ul className="navbar-nav mr-auto">
-   <li className="nav-item active">
-     <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-   </li>
+   {
+    userStore ? (<li className="nav-item">
+      <a className="nav-link" href="#">{userStore.fullName}</a>
+    </li>) :""
+   }
 
-   <li className="nav-item">
-     <a className="nav-link" href="#">fullanme</a>
-   </li>
-   <div className="collapse navbar-collapse mr-2" id="navbarNavDarkDropdown">
+   
+   {
+    userStore.role === "Administrator" ? (
+      <div className="collapse navbar-collapse mr-2" id="navbarNavDarkDropdown">
    <ul className="navbar-nav">
      <li className="nav-item dropdown">
        <button className="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
          Menu's
        </button>
        <ul className="dropdown-menu dropdown-menu-dark">
-        <a className="dropdown-item" href="#">Vehicle List</a>
+       <NavLink to={"/Admin/VehicleIndex"}>
+       <a className="dropdown-item" href="#">Vehicle List</a>
+       </NavLink>
        </ul>
      </li>
    </ul>
  </div>
-
- 
-
-   <a type='button' className="btn btn-success "  >Logout</a>
-
-
+    ) : ""
+   }
    
-   <>
+
+ {
+ userStore.nameid != "" ? (
+  <a type='button' className="btn btn-success " onClick={()=>handleLogout()} >Logout</a>
+ ): (
+  <>
    <li className="nav-item" style={{marginRight:"5px"}}>
-   
-   <a className="btn btn-success " >Register</a>
-
+   <NavLink to={"/Register"} className="btn btn-success ">Register
+   </NavLink>
   
  </li>
    
    <li className="nav-item" style={{marginRight:"5px"}}>
-
-     <a className="btn btn-success " >Login</a>
+   <NavLink to={"/Login"} className="btn btn-success ">Login
+   </NavLink>
 
    </li>
    
    </>
+ )
+ }
+
+   
+
+
+   
+   
    
  
   
@@ -68,7 +105,7 @@ function Header() {
     </div>
       
     </div>
-  )
+)
 }
 
 export default Header

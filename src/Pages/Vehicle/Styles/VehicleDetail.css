@@ -1,15 +1,16 @@
 /* Sayfa arkaplanı */
 body {
     background-color: rgb(240,240,240); /* Siyah */
-    color: #eee; /* Beyaz */
+    color: #000000; /* Beyaz */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
+
 /* Başlık */
 h1 {
-    color: silver; /* Kırmızı */
+    color: black; /* Kırmızı */
     text-align: center;
 }
 
@@ -45,7 +46,7 @@ input[type="text"] {
 
 button {
     background-color: #FF0000; /* Kırmızı */
-    color: #fff; /* Beyaz */
+    color: black; /* Beyaz */
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
