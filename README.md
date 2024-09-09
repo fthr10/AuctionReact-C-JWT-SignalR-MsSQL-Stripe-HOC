@@ -1,46 +1,67 @@
-# Getting Started with Create React App
+# Auction App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was developed using **ASP.NET Core 7** and **React TypeScript** to create a modern web application. Below is a detailed overview of the technologies and integrations used in the project.
 
-## Available Scripts
+## Technologies and Integrations Used
 
-In the project directory, you can run:
+### 1. ASP.NET Core 7 and React TypeScript
+- **Modern Web Development**: This project utilizes **ASP.NET Core 7** for the backend and **React TypeScript** for the frontend. These technologies enable the development of high-performance and scalable web applications.
 
-### `npm start`
+### 2. SignalR and JWT Integration
+- **Real-time Communication**: **SignalR** has been integrated to provide real-time data updates and interactive features.
+- **JWT**: **JSON Web Token (JWT)** is used for authentication, ensuring secure session management and authorization.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 3. Stripe Payment Integration
+- **Secure Payments**: The **Stripe** payment integration allows users to make secure and seamless online payments.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 4. ASP.NET Identity and Hoc Structure for User Management
+- **User Management**: The **ASP.NET Identity** library is used for secure user registration, login, and authorization processes.
 
-### `npm test`
+### 5. Code-First Database Management Approach
+- **Entity Framework Core** is used with the **Code-First** approach to design and create the database based on project requirements.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 6. MSSQL Database Integration
+- **Database Management**: The project integrates **MSSQL** for data modeling and database management.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+# Açık arttırma Uygulaması
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Bu proje, **ASP.NET Core 7** ve **React TypeScript** kullanarak modern bir web uygulaması geliştirmek amacıyla oluşturulmuştur. Aşağıda projede kullanılan teknolojiler ve entegrasyonlar hakkında bilgi bulabilirsiniz.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Kullanılan Teknolojiler ve Entegrasyonlar
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 1. ASP.NET Core 7 ve React TypeScript
+- **Modern Web Geliştirme**: Bu projede, **ASP.NET Core 7** arka uç için, **React TypeScript** ise ön yüz için kullanılmıştır. Bu teknolojiler, performanslı ve ölçeklenebilir web uygulamaları geliştirmemizi sağlar.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 2. SignalR ve JWT Entegrasyonu
+- **Canlı İletişim**: **SignalR** ile canlı veri güncellemeleri ve etkileşimli özellikler sağlanmıştır.
+- **JWT**: Kimlik doğrulaması için **JSON Web Token (JWT)** kullanılmıştır, böylece güvenli oturum yönetimi ve yetkilendirme sağlanmıştır.
 
-## Learn More
+### 3. Stripe Ödeme Entegrasyonu
+- **Güvenli Ödemeler**: Kullanıcıların sorunsuz ve güvenli bir şekilde ödeme yapabilmesi için **Stripe** ödeme entegrasyonu gerçekleştirilmiştir.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 4. ASP.NET Identity ve Hoc Yapısı ile Kullanıcı Yönetimi
+- **Kullanıcı Yönetimi**: **ASP.NET Identity** kütüphanesi kullanılarak kullanıcı kayıt, giriş ve yetkilendirme işlemleri güvenli bir şekilde yönetilmiştir.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 5. Code-First Yaklaşımıyla Veritabanı Yönetimi
+- **Entity Framework Core** kullanılarak **Code-First** yaklaşımı ile veritabanı tasarlanmış ve proje ihtiyaçlarına uygun bir şekilde oluşturulmuştur.
+
+### 6. MSSQL Veritabanı Entegrasyonu
+- **Veri Tabanı Yönetimi**: **MSSQL** kullanılarak veri modelleme ve veritabanı yönetimi gerçekleştirilmiştir.
+
+
+
+
+
+
+
+![Ekran görüntüsü 2024-09-09 142546](https://github.com/user-attachments/assets/acf4cbb8-1fcf-43fc-b1f8-808e71398586)
+![Ekran görüntüsü 2024-09-09 142443](https://github.com/user-attachments/assets/770731d4-29e4-46d7-8f9e-8f0e72665221)
+![Ekran görüntüsü 2024-09-09 132526](https://github.com/user-attachments/assets/576c887a-5943-41cd-894c-ef7d4fb4804b)
+![Ekran görüntüsü 2024-09-09 132435](https://github.com/user-attachments/assets/756c70f3-7eda-4c2f-a371-7239101134b3)
+![Ekran görüntüsü 2024-09-09 132408](https://github.com/user-attachments/assets/32e761cb-7573-4182-abeb-6092b7d43921)
+![Ekran görüntüsü 2024-09-09 132319](https://github.com/user-attachments/assets/b7293cc2-f38e-4967-955e-8171c1c48b39)
+![Ekran görüntüsü 2024-09-09 132244](https://github.com/user-attachments/assets/89185ed5-6fa2-49f0-bd4a-0f3a8d2e72ae)
